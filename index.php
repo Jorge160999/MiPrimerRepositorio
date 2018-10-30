@@ -5,9 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Pagina principal</title>
+    <link rel="stylesheet" href="estilos/style.css">
     
 </head>
 <body>
-    
+    <?php include 'partes/header.php' ?>
 </body>
 </html>
