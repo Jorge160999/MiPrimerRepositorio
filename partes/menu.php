@@ -1,16 +1,13 @@
 <nav id="nav">
-    <ol>
-        <li><a href="">Principal</a></li>
 
-        <li><a href="">Registrarse</a></li>
+    <ol id="menu" style="width:80%; margin: 0 auto">
+        <li><img src="logoJorge.png" height="150px" width="400px"></li>
 
-        <li><a href="">Ingresar</a></li>
+        <li style="align-self:center"><a href=""><h2>PRINCIPAL</h2></a></li>
 
-        <li><a href="">Sugerencia aquí</a></li>
+        <li style="align-self:center"><a href=""><h2>CATEGORIAS</h2></a></li>
 
-        <li><a href="">Celulares</a></li>
-        
-        <li><a href="">Cerrar Sesión</a></li>
+        <li style="align-self:center"><a href=""><h2>SUGERENCIAS AQUÍ</h2></a></li>   
 
     </ol>
 </nav>

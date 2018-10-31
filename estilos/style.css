@@ -1,3 +1,28 @@
+header{
+    padding:5px 10px 0 10px;
+}
+
+#menu{
+    display: flex;
+    justify-content: space-between;
+}
 header p{
     text-align: center;
+    
+}
+#ingresoYotros a{
+    color: rgb(185, 105, 0);
+}
+footer{
+    background-color: wheat;
+    padding: 5px;
+}
+.clear{
+    clear:both;
+}
+li{
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
 }
