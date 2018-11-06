@@ -10,6 +10,23 @@
 </head>
 <body>
     <?php include 'partes/header.php' ?>
+    <div style="margin: 2px 0 10px 0; border: 1px solid black;"></div>
+    <nav class="navmenu">
+
+        <ol class="menu" style="width:80%; margin: 0 auto">
+            
+
+            <li style="align-self:center"><a href=""><h4>FONDO</h4></a></li>
+
+            <li style="align-self:center"><a href=""><h4>¿QUIÉNES SOMOS?</h4></a></li>
+
+            <li style="align-self:center"><a href=""><h4>MISIÓN</h4></a></li>
+            
+            <li style="align-self:center"><a href=""><h4>VISIÓN</h4></a></li>  
+
+        </ol>
+    </nav>
+    <img src="img1.jpg" width="100%" >
 
     <?php include 'partes/footer.php' ?>
 </body>

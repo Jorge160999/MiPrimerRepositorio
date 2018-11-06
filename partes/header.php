@@ -8,5 +8,5 @@
     </div>
     <div class="clear"></div>
 
-    <?php include'menu.php' ?>
+    <?php include 'menu.php' ?>
 </header>

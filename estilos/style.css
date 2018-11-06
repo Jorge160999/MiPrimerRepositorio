@@ -2,7 +2,7 @@ header{
     padding:5px 10px 0 10px;
 }
 
-#menu{
+.menu{
     display: flex;
     justify-content: space-between;
 }
@@ -25,4 +25,20 @@ li{
 }
 a{
     text-decoration: none;
+}
+#ingresoYotros a:hover{
+    color: blueviolet;
+    transition: color .2s;
+}
+.nav a:hover{
+    color:orange;
+    border:1px solid yellowgreen;
+    transition: color .2s;
+    transition: border .2s;
+}
+
+
+.navmenu a:hover{
+    color:orange;
+    transition: color .2s;
 }
