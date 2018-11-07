@@ -26,6 +26,7 @@
 
         </ol>
     </nav>
+    <div style="margin: 2px 0 0 0; border: 1px solid black;"></div>
     <img src="img1.jpg" width="100%" >
 
     <?php include 'partes/footer.php' ?>
