@@ -11,28 +11,42 @@
     <?php include 'partes/header.php' ?>
     <h1>Registrese aquí</h1>
 
+    <?php if (isset($_GET["usuE"])) { ?>
+        <p style="color:red">Usuario ya existente</p>
+    <?php } ?>
+
     <form action="registro_procesar.php" method="post">
         <div>
-            Nombres: <input type="text" name="nombres" required>
+    Nombres: <input type="text" name="nombres" <?php if(isset($_COOKIE["n"])){ ?> value= <?php echo $_COOKIE["n"] ?> <?php } ?> required>
         </div>
         <div>
-            Apellidos: <input type="text" name="apellidos" required>
-        </div>
-
-        <div>
-            Sexo: <input type="radio" name="sexo" value="0">Masculino <input type="radio" name="sexo" value="1">Femenino
+            Apellidos: <input type="text" name="apellidos" <?php if(isset($_COOKIE["a"])){ ?> value= <?php echo $_COOKIE["a"] ?> <?php } ?> required>
         </div>
 
         <div>
-            Fecha de Nacimiento: <input type="date" name="fecha_nac" required>
+            Sexo: <input type="radio" name="sexo" value="0" 
+            <?php if(isset($_COOKIE["s"])){ if($_COOKIE["s"]==0){ ?> 
+            CHECKED 
+            <?php } } ?> >Masculino 
+
+            <input type="radio" name="sexo" value="1" 
+            <?php if(isset($_COOKIE["s"])){ if($_COOKIE["s"]==1) { ?>
+            CHECKED 
+            <?php } } ?> >Femenino
+            
         </div>
 
         <div>
-            Nombre de usuario: <input type="text" name="usuario" required>
+            Fecha de Nacimiento: <input type="date" name="fecha_nac" <?php if(isset($_COOKIE["nc"])){ ?> value= <?php echo $_COOKIE["nc"] ?> focused <?php } ?> required>
+        </div>
+
+        <div>
+            Nombre de usuario: <input type="text" name="usuario" <?php if(isset($_COOKIE["u"])){ ?> value= <?php echo $_COOKIE["u"] ?> <?php } ?> required>
+            
         </div>
         
         <div>
-            Correo: <input type="email" name="correo" required> 
+            Correo: <input type="email" name="correo" <?php if(isset($_COOKIE["c"])){ ?> value= <?php echo $_COOKIE["c"] ?> <?php } ?> required> 
         </div>
         <div>
             Contraseña: <input type="password" name="pass" required>
