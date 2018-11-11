@@ -11,7 +11,7 @@ $pass=$_POST["pass"];
 
 #--procesar--
 $pass = sha1($pass);
-$db = new PDO("mysql:host=localhost;dbname=tipc_phones; charset=utf8", 'root', '');
+$db = new PDO("mysql:host=localhost;dbname=tipc_phones; charset=utf8mb4", 'root', '');
 $stcomp=$db->query("SELECT * FROM usuarios WHERE Usuario='$usuario' ");
 $l=$stcomp->fetchAll();
 
@@ -35,7 +35,7 @@ if (count($l)==0){
     $cabecera="FROM: tipcphones16@gmail.com";
     $mensaje="De: El grupo de Tipc Phones \r\n";
     $mensaje.="Para: $n \r\n";
-    $mensaje.="Por favor ingrese a su cuenta en Log in y escriba este codigo para activar su cuenta: \r\n";
+    $mensaje.="Por favor ingrese a su cuenta en Log in y escriba este código para activar su cuenta: \r\n";
     $mensaje.="$sha";
     
     
