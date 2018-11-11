@@ -12,7 +12,7 @@
     <h1>Registrese aquí</h1>
 
     <?php if (isset($_GET["usuE"])) { ?>
-        <p style="color:red">Usuario ya existente</p>
+        <p style="color:red">Usuario y/o correo ya registrado</p>
     <?php } ?>
 
     <form action="registro_procesar.php" method="post">

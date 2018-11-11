@@ -12,11 +12,11 @@ $pass=$_POST["pass"];
 #--procesar--
 $pass = sha1($pass);
 $db = new PDO("mysql:host=localhost;dbname=tipc_phones; charset=utf8mb4", 'root', '');
-$stcomp=$db->query("SELECT * FROM usuarios WHERE Usuario='$usuario' ");
+$stcomp=$db->query("SELECT * FROM usuarios WHERE Usuario='$usuario' OR Correo='$c'");
 $l=$stcomp->fetchAll();
 
 
-#Si el nombre de usuario aun no esta creado: 
+#Si el nombre de usuario y/o correo aun no esta creado: 
 if (count($l)==0){
     $stmt = $db->query("INSERT INTO usuarios(Nombres, Apellidos, Sexo, Fecha_Nac, Usuario, Correo, Password) VALUES ('$n', '$a', $sexo, '$nac', '$usuario', '$c', '$pass')");
     
@@ -49,11 +49,11 @@ if (count($l)==0){
     }
     
 }
-#Si ya existe el nombre de usuario en la base de datos se redirige con una variable por get
+#Si ya existe el nombre de usuario y/o correo en la base de datos se redirige con una variable por get
 
 else{
     #--salida--
-    #Crear cookies para mantener la informacion en los inputs del formularios
+    #Crear cookies para mantener la informacion en los inputs del formulario
     setcookie("u", $usuario, time()+30);
     setcookie("n", $n, time()+30);
     setcookie("a", $a, time()+30);

@@ -7,7 +7,7 @@
     $db = new PDO('mysql:host=localhost;dbname=tipc_phones; charset=utf8mb4', 'root', '');
     $stmt = $db->query("SELECT * FROM confirmaciones WHERE usuarioID= '$id' ");
     $usuarios = $stmt->fetchObject();
-
+    #salida
     if($codigo == $usuarios->codigo){
         $stmt1 = $db->query("DELETE FROM confirmaciones WHERE usuarioID= '$id' ");
         $stmt1 = $db->query("UPDATE usuarios SET Validado=1 WHERE UsuariosID= '$id' ");

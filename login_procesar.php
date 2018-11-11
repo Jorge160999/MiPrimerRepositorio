@@ -1,8 +1,9 @@
 <?php 
+#entrada
 $correo=$_POST["usuario"];
 $pass  = $_POST["pass"];
 
-
+#proceso
 $pass = sha1($pass);
 
 $db = new PDO('mysql:host=localhost;dbname=tipc_phones; charset=utf8mb4', 'root', '');
@@ -21,7 +22,8 @@ if (count($usuarios)== 1 ){
             header("Location: login.php?unv=$id&usu=$name");
         }else{
             session_start();
-            $_SESSION["usuario"] =$name;  
+            $_SESSION["usuario"] =$name;
+            #salida  
             header("Location: index.php");
         } 
     }
@@ -30,6 +32,7 @@ if (count($usuarios)== 1 ){
 
 
 else{
+    #salida
     header("Location: login.php?usuNE=1");  
 }
 
