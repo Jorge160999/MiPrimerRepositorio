@@ -25,11 +25,11 @@ $titulo=$infocel->titulo;
     <main id="informacion">
         
         <p><?php echo $info->especificaciones ?></p>
-        <p><?echo $info->descripcion ?></p>
+        <p><?php echo $info->descripcion ?></p>
 
         <h3>Comenta aquí</h3>
         <div style="text-align:center">
-            <form action="funcionesUsuario/procesar_comentario.php">
+            <form action="procesar_comentario.php" method="post">
                 
                 <h4>Su comentario: </h4>
                 <input type="hidden" name="celularID" value=<?php echo $celularID ?>>

@@ -23,7 +23,7 @@ $categorias = $stmt->fetchAll();
 
         <div id="hijo">
             <p style="text-align:center"><?php echo $cat["titulo"] ?></p>
-            <p style="text-align:center"><a href="celularesCat.php?ce=<?php echo $cat["categoriaID"] ?>"></a><img src="data:image/jpg;base64,<?php echo base64_encode($cat["imagen"]);?>" ></p>  
+            <p style="text-align:center"><a href="celularesCat.php?ce=<?php echo $cat["categoriaID"] ?>"><img src="data:image/jpg;base64,<?php echo base64_encode($cat["imagen"]);?>" ></a></p>  
         </div>
 
         <?php } ?>
