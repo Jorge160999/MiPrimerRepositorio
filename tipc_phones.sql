@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 10-11-2018 a las 06:55:25
+-- Tiempo de generación: 12-11-2018 a las 00:50:48
 -- Versión del servidor: 10.1.33-MariaDB
 -- Versión de PHP: 7.2.6
 
@@ -21,6 +21,44 @@ SET time_zone = "+00:00";
 --
 -- Base de datos: `tipc_phones`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `categorias`
+--
+
+CREATE TABLE `categorias` (
+  `categoriaID` int(11) NOT NULL,
+  `titulo` varchar(100) NOT NULL,
+  `imagen` longblob NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `celulares`
+--
+
+CREATE TABLE `celulares` (
+  `celularID` int(11) NOT NULL,
+  `categoriaID` int(11) NOT NULL,
+  `titulo` varchar(100) NOT NULL,
+  `imagen` longblob NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `comentarios`
+--
+
+CREATE TABLE `comentarios` (
+  `comentarioID` int(11) NOT NULL,
+  `usuario` varchar(50) NOT NULL,
+  `celularID` int(11) NOT NULL,
+  `comentario` varchar(3000) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -56,6 +94,24 @@ CREATE TABLE `usuarios` (
 --
 
 --
+-- Indices de la tabla `categorias`
+--
+ALTER TABLE `categorias`
+  ADD PRIMARY KEY (`categoriaID`);
+
+--
+-- Indices de la tabla `celulares`
+--
+ALTER TABLE `celulares`
+  ADD PRIMARY KEY (`celularID`);
+
+--
+-- Indices de la tabla `comentarios`
+--
+ALTER TABLE `comentarios`
+  ADD PRIMARY KEY (`comentarioID`);
+
+--
 -- Indices de la tabla `confirmaciones`
 --
 ALTER TABLE `confirmaciones`
@@ -73,10 +129,28 @@ ALTER TABLE `usuarios`
 --
 
 --
+-- AUTO_INCREMENT de la tabla `categorias`
+--
+ALTER TABLE `categorias`
+  MODIFY `categoriaID` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT de la tabla `celulares`
+--
+ALTER TABLE `celulares`
+  MODIFY `celularID` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT de la tabla `comentarios`
+--
+ALTER TABLE `comentarios`
+  MODIFY `comentarioID` int(11) NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT de la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `UsuariosID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1;
+  MODIFY `UsuariosID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

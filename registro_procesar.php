@@ -45,7 +45,7 @@ if (count($l)==0){
         header("Location: registro_confirmacion.php");
     }else{
         
-        echo 'Error no enviado';
+        header("Location: correo_confirmacion.php?cc=1&p=1");
     }
     
 }

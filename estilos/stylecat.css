@@ -1,0 +1,8 @@
+#contenedor{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+#hijo{
+    border:1px solid green;
+}

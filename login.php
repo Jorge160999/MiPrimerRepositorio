@@ -37,13 +37,19 @@
     <?php } ?>
 
     <form action="validar_usuario.php" method="post">
-        Código: <input type="text" name="codigo">
+        Código: <input type="text" name="codigo" required>
         <input type="hidden" name="idUsuario" value=<?php echo $valor ?>>
         <input type="hidden" name="nameUsuario" value=<?php echo $usu ?>>
         <button type="submit">Validar cuenta</button>
     </form>
 
+    <a href="nomellego.php?unv=<?php echo $valor?>&usu=<?php echo $usu ?>">No me llegó el código</a> 
+        
+    
+
     <?php } ?>
+
+    
     
 
     <?php include 'partes/footer.php' ?>
