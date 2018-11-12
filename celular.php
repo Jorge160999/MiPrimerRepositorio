@@ -5,7 +5,7 @@ $celularID=$_GET["ce"];
 $stmt = $db->query("SELECT * FROM celularesInfo WHERE celularID='$celularID' ");
 $info = $stmt->fetchObject();
 $stmt1 = $db->query("SELECT * FROM celulares WHERE celularID='$celularID' ");
-$infocel = $stmt->fetchObject();
+$infocel = $stmt1->fetchObject();
 $titulo=$infocel->titulo;
 ?>
 <!DOCTYPE html>
@@ -21,7 +21,12 @@ $titulo=$infocel->titulo;
 <body>
     <?php include 'partes/header.php' ?>
     <h1>Bienvenido! gracias por visitar la información de <?php echo $titulo ?></h1>
+    <img src="data:image/jpg;base64,<?php echo base64_encode($infocel->imagen);?>" >
     <main id="informacion">
+        
+        <p><?php echo $info->especificaciones ?></p>
+        <p><?echo $info->descripcion ?></p>
+
         <h3>Comenta aquí</h3>
         <div style="text-align:center">
             <form action="funcionesUsuario/procesar_comentario.php">
@@ -46,7 +51,7 @@ $titulo=$infocel->titulo;
 
         <div style="border:1px solid black; width:40; margin: 10px auto; padding:10px">
             <?php if ($_SESSION["usuario"]==$coment["usuario"]){ ?>
-                <form action="funcionesUsuario/borrar.php" method="post">
+                <form action="borrar.php" method="post">
                     <input type="hidden" name="id" value=<?php echo $coment["comentarioID"] ?>>
                     <input type="hidden" name="celularID" value=<?php echo $celularID ?>>
                     <button type="submit">Borrar comentario</button>

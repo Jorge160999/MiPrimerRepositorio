@@ -24,7 +24,7 @@ $comentario=$_POST["comentario"];
 </head>
 <body>
     <?php include 'partes/header.php' ?>
-    <form action="funcionesUsuario/editar.php" method="post">
+    <form action="editar.php" method="post">
         <input type="hidden" name="id" value=<?php echo $id ?>>
         <input type="hidden" name="celularID" value=<?php echo $celularID ?>>
         <textarea name="comentario" cols="50" rows="30" value=<?php echo $comentario ?>></textarea>
