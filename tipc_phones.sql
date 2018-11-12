@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 12-11-2018 a las 02:32:40
+-- Tiempo de generación: 12-11-2018 a las 05:50:09
 -- Versión del servidor: 10.1.33-MariaDB
 -- Versión de PHP: 7.2.6
 
@@ -50,6 +50,18 @@ CREATE TABLE `celulares` (
 -- --------------------------------------------------------
 
 --
+-- Estructura de tabla para la tabla `celularesinfo`
+--
+
+CREATE TABLE `celularesinfo` (
+  `celularID` int(11) NOT NULL,
+  `especificaiones` varchar(400) NOT NULL,
+  `descripcion` varchar(400) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
 -- Estructura de tabla para la tabla `comentarios`
 --
 
@@ -91,6 +103,13 @@ CREATE TABLE `usuarios` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
+-- Volcado de datos para la tabla `usuarios`
+--
+
+INSERT INTO `usuarios` (`UsuariosID`, `Nombres`, `Apellidos`, `Sexo`, `Fecha_Nac`, `Usuario`, `Correo`, `Password`, `Validado`) VALUES
+(1, 'Administrador', 'Administrador', 0, '2018-11-11', 'admin', 'tipcphones.sugerencias@gmail.com', '3094f08b21afd6f5600dcae5be74151f78fd0538', 1);
+
+--
 -- Índices para tablas volcadas
 --
 
@@ -104,6 +123,12 @@ ALTER TABLE `categorias`
 -- Indices de la tabla `celulares`
 --
 ALTER TABLE `celulares`
+  ADD PRIMARY KEY (`celularID`);
+
+--
+-- Indices de la tabla `celularesinfo`
+--
+ALTER TABLE `celularesinfo`
   ADD PRIMARY KEY (`celularID`);
 
 --

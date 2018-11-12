@@ -12,30 +12,7 @@
 <body>
     <?php include 'partes/header.php' ?>
     <div style="margin: 2px 0 10px 0; border: 1px solid black;"></div>
-    
-    <?php if(isset($_SESSION["usuario"])){ if(($_SESSION["usuario"]=='admin')){ ?>
 
-    
-
-        <nav class="navmenu">
-
-        <ol class="menu" style="width:80%; margin: 0 auto">
-            
-
-            <li style="align-self:center"><a href="index.php"><h4>FONDO</h4></a></li>
-
-            <li style="align-self:center"><a href="registar_categoria.php"><h4>AÑADIR CATEGORIA</h4></a></li>
-
-            <li style="align-self:center"><a href="registrar_celular.php"><h4>AÑADIR CELULAR</h4></a></li>
-            
-            
-
-        </ol>
-        </nav>
-        
-    
-
-    <?php }}else{ ?>
         <nav class="navmenu">
         <ol class="menu" style="width:80%; margin: 0 auto">
             
@@ -50,9 +27,13 @@
 
         </ol>
         </nav>
-    <?php } ?>
+    
     <div style="margin: 2px 0 0 0; border: 1px solid black;"></div>
-    <img src="img1.jpg" width="100%" >
+    <h5 style="text-align:center">MISIÓN</h5>
+    <h5 style="text-align:center">Nuestra es misión es llevar la información necesaria a cada persona que le guste la tecnología de los celulares
+    para que encuentre la mejor opción, o si ya lo tiene que pueda compartir a la comunidad sus experiencias.
+    </h5>
+    <img src="img1.jpg" width="100%" height="400px">
 
     <?php include 'partes/footer.php' ?>
 </body>
