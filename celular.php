@@ -23,10 +23,12 @@ $titulo=$infocel->titulo;
     <h1>Bienvenido! gracias por visitar la información de <?php echo $titulo ?></h1>
     <img src="data:image/jpg;base64,<?php echo base64_encode($infocel->imagen);?>" >
     <main id="informacion">
-        
+        <h3>Especificaciones: </h3>
         <p><?php echo $info->especificaciones ?></p>
+        <h3>Descripción: </h3>
         <p><?php echo $info->descripcion ?></p>
-
+        
+        <?php if(isset($_SESSION["usuario"])){ ?>
         <h3>Comenta aquí</h3>
         <div style="text-align:center">
             <form action="procesar_comentario.php" method="post">
@@ -69,6 +71,8 @@ $titulo=$infocel->titulo;
         </div>
 
         <?php }} ?>
+
+        <?php } ?>
        
     
     </main>
