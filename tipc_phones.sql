@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 12-11-2018 a las 00:50:48
+-- Tiempo de generación: 12-11-2018 a las 02:32:40
 -- Versión del servidor: 10.1.33-MariaDB
 -- Versión de PHP: 7.2.6
 
@@ -57,7 +57,8 @@ CREATE TABLE `comentarios` (
   `comentarioID` int(11) NOT NULL,
   `usuario` varchar(50) NOT NULL,
   `celularID` int(11) NOT NULL,
-  `comentario` varchar(3000) NOT NULL
+  `comentario` varchar(3000) NOT NULL,
+  `fecha` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
