@@ -18,6 +18,7 @@ header p{
 footer{
     background-color: wheat;
     padding: 5px;
+    border-top: 2px solid black;
 }
 .clear{
     clear:both;
@@ -46,4 +47,7 @@ a{
 }
 body{
     margin:0;
+}
+.navmenu{
+    background-color: wheat;
 }

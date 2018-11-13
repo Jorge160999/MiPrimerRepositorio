@@ -1,4 +1,4 @@
-<nav class="navmenu">
+<nav class="navmenu" >
         <ol class="menu" style="width:80%; margin: 0 auto">
             
 

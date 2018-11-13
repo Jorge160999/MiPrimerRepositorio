@@ -19,7 +19,7 @@
     <h5 style="text-align:center">VISIÓN</h5>
     <h5 style="text-align:center">La página llegará a ser conocida entre la comunidad amante de la tecnología y especialmente smartphones.
     </h5>
-    <img src="img1.jpg" width="100%" height="400px">
+    <img src="http://fscl01.fonpit.de/userfiles/6727621/image/2nd_YEAR/best_smartphones/AndroidPIT-best-smartphones-11.jpg" width="100%" height="400px">
 
     <?php include 'partes/footer.php' ?>
 </body>

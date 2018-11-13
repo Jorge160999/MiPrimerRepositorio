@@ -16,14 +16,14 @@ $categorias = $stmt->fetchAll();
 </head>
 <body>
     <?php include 'partes/header.php' ?>
-    <h1>Selecciona una de nuestras categorías</h1>
+    <h1 style="background-color: wheat; margin:0; padding:15px; border: 2px solid black;">Selecciona una de nuestras categorías</h1>
     <main >
 
         <?php foreach ($categorias as $cat){ ?>
 
-        <div id="hijo">
+        <div id="hijo" style="height:500px;background-image: url('https://cdn.wallpapersafari.com/80/87/pF2XnL.jpg');">
             <p style="text-align:center"><?php echo $cat["titulo"] ?></p>
-            <p style="text-align:center"><a href="celularesCat.php?ce=<?php echo $cat["categoriaID"] ?>"><img src="data:image/jpg;base64,<?php echo base64_encode($cat["imagen"]);?>" ></a></p>  
+            <p style="text-align:center"><a href="celularesCat.php?ce=<?php echo $cat["categoriaID"] ?>"><img src="data:image/jpg;base64,<?php echo base64_encode($cat["imagen"]);?>" height="300px" width="450px"></a></p>  
         </div>
 
         <?php } ?>

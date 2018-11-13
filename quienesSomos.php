@@ -19,7 +19,7 @@
     <h5 style="text-align:center">¿QUIENES SOMOS?</h5>
     <h5 style="text-align:center">Somos un grupo de practicantes de desarrolladores que quieren dejar su granito de mejora a las sociedad.
     </h5>
-    <img src="img1.jpg" width="100%" height="400px">
+    <img src="http://fscl01.fonpit.de/userfiles/6727621/image/2nd_YEAR/best_smartphones/AndroidPIT-best-smartphones-11.jpg" width="100%" height="400px">
 
     <?php include 'partes/footer.php' ?>
 </body>

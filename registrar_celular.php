@@ -19,7 +19,7 @@
     <?php if (isset($_GET["error"])){ ?>
     <p style="color:red">Categoría no existente</p>
     <?php } ?>
-    <div style="padding:10px;text-align:center">
+    <div style="padding:10px;text-align:center;background-image: url('https://konlinejobs.com/wp-content/uploads/2018/02/Backgrounds-Of-New-White-Wolf-Wallpaper-Widescreen-Full-Hd-Pics-Pc-On.jpg'); color:white; ">
         <form style="width:50%; margin:100px auto;padding:50px; border:1px solid black;" action="celular_registrar.php" method="post" enctype="multipart/form-data">
         
         Titulo: <input type="text" name="titulo" required>
@@ -91,7 +91,7 @@
         </div>
         <div style="height:20px;"></div>
 
-        Descripcion: <br><textarea name="desc" cols="50" rows="10"></textarea>
+        Descripcion (Para saltos de linea escribir ''< br >'' pero junto): <br><textarea name="desc" cols="50" rows="10"></textarea>
         <div style="height:20px;"></div>
 
         <button style="" type="submit">Enviar</button>

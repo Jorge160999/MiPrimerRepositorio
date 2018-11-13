@@ -17,7 +17,7 @@ include 'partes/session_start.php';
     
     <?php include 'partes/header.php' ?>
 
-    <main>
+    <main style="background-image: url('http://hintergrundbild.org/wallpaper/full/2/a/7/155-vertical-4k-wallpapers-3840x2160.jpg'); color:white; ">
         <h1>Formulario de contacto</h1>
 
         <form action="sugerencias_procesar.php" method="post">

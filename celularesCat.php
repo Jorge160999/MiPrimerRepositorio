@@ -24,7 +24,7 @@ $celulares = $stmt->fetchAll();
 
         <div id="hijo" style="width:30%">
             <p style="text-align:center"><?php echo $cel["titulo"] ?></p>
-            <p style="text-align:center"><a  href="celular.php?ce=<?php echo $cel["celularID"] ?>"><img style="width:80%; margin: 0 auto;" src="data:image/jpg;base64,<?php echo base64_encode($cel["imagen"]);?>" ></a></p>  
+            <p style="text-align:center"><a  href="celular.php?ce=<?php echo $cel["celularID"] ?>"><img style="width:80%; height:300px; margin: 0 auto;" src="data:image/jpg;base64,<?php echo base64_encode($cel["imagen"]);?>" ></a></p>  
         </div>
 
         <?php } ?>

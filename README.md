@@ -34,6 +34,3 @@ auth_password='aqui su contraseña de su cuenta de correo de gmail')
 
 
 9)Abrir en localhost/'aqui el nombre de la carpeta bajada por defecto es miprimerrepositorio' y listo a usar la aplicacion web
-
-
-
