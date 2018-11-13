@@ -10,17 +10,20 @@
 </head>
 <body>
     <?php include 'partes/header.php' ?>
-
-    <form action="categoria_registrar.php" method="post" enctype="multipart/form-data">
+    <div style="margin: 2px 0 10px 0; border: 1px solid black;"></div>
+    <?php include 'partes/menuadmin.php' ?>
+    <div style="margin: 2px 0 10px 0; border: 1px solid black;"></div>
+    <div style="padding:10px;text-align:center">
+    <form style="width:50%; margin:100px auto;padding:50px; border:1px solid black;" action="categoria_registrar.php" method="post" enctype="multipart/form-data">
     
         Titulo: <input type="text" name="titulo" required>
-
-        Imagen(solo jpg por favor): <input type="file" name="img" required>
-
+        <div style="height:20px;"></div>
+        Imagen(solo jpg por favor): <br> <input type="file" name="img" required>
+        <div style="height:20px;"></div>
         <button type="submit">Enviar</button>
 
     </form>
-
+    </div>
     <?php include 'partes/footer.php' ?>
 </body>
 </html>

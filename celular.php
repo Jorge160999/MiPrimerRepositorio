@@ -35,7 +35,7 @@ $titulo=$infocel->titulo;
                 
                 <h4>Su comentario: </h4>
                 <input type="hidden" name="celularID" value=<?php echo $celularID ?>>
-                <textarea name="comentario" cols="50" rows="30"></textarea>
+                <textarea name="comentario" cols="80" rows="10"></textarea><br>
                 <button type="submit">Enviar comentario</button>
 
             </form>
@@ -51,7 +51,11 @@ $titulo=$infocel->titulo;
             foreach($comentarios as $coment){  
         ?>
 
-        <div style="border:1px solid black; width:40; margin: 10px auto; padding:10px">
+        <div style="border:1px solid black; width:40; margin: 10px 80px; padding:10px">
+
+            <h5><?php echo $coment["comentario"] ?></h5>
+            <h6>Publicado por <?php echo $coment["usuario"] ?> a la fecha de: <?php echo $coment["fecha"] ?></h6>
+
             <?php if ($_SESSION["usuario"]==$coment["usuario"]){ ?>
                 <form action="borrar.php" method="post">
                     <input type="hidden" name="id" value=<?php echo $coment["comentarioID"] ?>>
@@ -65,9 +69,6 @@ $titulo=$infocel->titulo;
                     <button type="submit">Editar comentario</button>
                 </form>
             <?php } ?>
-
-            <h5><?php echo $coment["comentario"] ?></h5>
-            <h6>Publicado por <?php echo $coment["usuario"] ?> a la fecha de: <?php echo $coment["fecha"] ?></h6>
         </div>
 
         <?php }} ?>

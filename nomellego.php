@@ -15,12 +15,14 @@
     <p style="color:red">Correo incorrecto</p>
     <?php } ?>
 
-    <form action="nomellego_procesar.php">
+    <form action="nomellego_procesar.php" method="post">
             <input type="hidden" name="idUsuario" value=<?php echo $valor ?>>
             <input type="hidden" name="nameUsuario" value=<?php echo $usu ?>>
             Mi correo: <input type="email" name="correo" required>
             <button type="submit">Volver a enviar</button>
     </form>
+
+    
 
     <?php include 'partes/footer.php' ?>
 </body>
