@@ -1,3 +1,4 @@
+<?php include 'partes/session_start.php' ?>
 <?php
 #entrada
 $id=$_POST["id"];
@@ -5,9 +6,11 @@ $celularID=$_POST["celularID"];
 $comentario=$_POST["comentario"];
 
 
-// #proceso
-// $db = new PDO('mysql:host=localhost;dbname=tipc_phones; charset=utf8mb4', 'root', '');
-// $stmt = $db->query("UPDATE comentarios SET comentario='$comentario', fecha=SYSDATE() WHERE comentarioID='$id' " );
+ #proceso
+ $db = new PDO('mysql:host=localhost;dbname=tipc_phones; charset=utf8mb4', 'root', '');
+ $stmt = $db->query("SELECT * FROM comentarios WHERE comentarioID='$id' " );
+ $object=$stmt->fetchObject();
+ $object=$object->comentario;
 
 // #header
 // header("location: celular.php?ce=$celularID");
@@ -28,7 +31,7 @@ $comentario=$_POST["comentario"];
     <form action="editar.php" method="post">
         <input type="hidden" name="id" value=<?php echo $id ?>>
         <input type="hidden" name="celularID" value=<?php echo $celularID ?>>
-        <textarea name="comentario" cols="50" rows="30" ><?php echo $comentario ?></textarea>
+        <textarea name="comentario" cols="50" rows="30" ><?php echo $object ?></textarea>
         <button type="submit">Editar comentario</button>
     </form>
     <?php include 'partes/footer.php' ?>

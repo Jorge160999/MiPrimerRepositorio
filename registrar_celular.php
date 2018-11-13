@@ -36,7 +36,7 @@
             <table border="1" id="t">
                 <tr>
                     <td ><label >DIMENSIONES FÍSICAS	</label></td>
-                    <td><input type="text" name="a" required></td>
+                    <td><input type="text" name="m" required></td>
                 </tr>
                 <tr>
                     <td>PANTALLA</td>

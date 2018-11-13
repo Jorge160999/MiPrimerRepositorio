@@ -23,8 +23,72 @@ $titulo=$infocel->titulo;
     <h1>Bienvenido! gracias por visitar la información de <?php echo $titulo ?></h1>
     <img src="data:image/jpg;base64,<?php echo base64_encode($infocel->imagen);?>" >
     <main id="informacion">
+        
+        
         <h3>Especificaciones: </h3>
-        <p><?php echo $info->especificaciones ?></p>
+
+        <div style="width:60%; margin:0 auto;">
+            <h3 ><?php echo $titulo ?></h3>
+            <table border="1" id="t">
+                <tr>
+                    <td ><label >DIMENSIONES FÍSICAS	</label></td>
+                    <td><?php echo $info->m ?></td>
+                </tr>
+                <tr>
+                    <td>PANTALLA</td>
+                    <td><?php echo $info->a ?></td>
+                </tr>
+                <tr>
+                    <td><label >RESOLUCIÓN</label></td>
+                    <td><?php echo $info->b ?></td>
+                </tr>
+                <tr>
+                    <td><label >PROCESADOR</label></td>
+                    <td><?php echo $info->c ?></td>
+                </tr>
+                <tr>
+                    <td><label >GPU</label></td>
+                    <td><?php echo $info->d ?></td>
+                </tr>
+                <tr>
+                    <td><label>RAM</label></td>
+                    <td><?php echo $info->e ?></td>
+                </tr>
+                <tr>
+                    <td><label >MEMORIA</label></td>
+                    <td><?php echo $info->f ?></td>
+                </tr>
+                <tr>
+                    <td><label >CÁMARAS TRASERAS	</label></td>
+                    <td><?php echo $info->g ?></td>
+                </tr>
+                <tr>
+                    <td><label>CÁMARA DELANTERA	</label></td>
+                    <td><?php echo $info->h ?></td>
+                </tr>
+                <tr>
+                    <td><label >CONECTIVIDAD</label></td>
+                    <td><?php echo $info->i ?></td>
+                </tr>
+                <tr>
+                    <td><label >OTROS</label></td>
+                    <td><?php echo $info->j ?></td>
+                </tr>
+                <tr>
+                    <td><label>BATERÍA</label></td>
+                    <td><?php echo $info->k ?></td>
+                </tr>
+                <tr>
+                    <td><label>PRECIO	</label></td>
+                    <td><?php echo $info->l ?></td>
+                </tr>
+               
+            </table>
+        </div>
+        <div style="height:20px;"></div>
+                
+
+
         <h3>Descripción: </h3>
         <p><?php echo $info->descripcion ?></p>
         
@@ -64,7 +128,7 @@ $titulo=$infocel->titulo;
                 </form>
                 <form action="editar_comentario.php" method="post">
                     <input type="hidden" name="id" value=<?php echo $coment["comentarioID"] ?>>
-                    <input type="hidden" name="comentario" value=<?php echo $coment["comentario"] ?>>
+                    
                     <input type="hidden" name="celularID" value=<?php echo $celularID ?>>
                     <button type="submit">Editar comentario</button>
                 </form>
